@@ -21,4 +21,9 @@ export const userSchema = new mongoose.Schema({
     validate: [validator.isEmail, "Email is not valid!"],
     unique: true,
   },
+  password: {
+    type: String,
+    required: [true, "The password is required!"],
+    minLength: 4,
+  },
 });
